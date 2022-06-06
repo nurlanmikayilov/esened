@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nurlanmikayilovesened 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nurlanmikayilovesened
+  template:
+    metadata:
+      labels:
+        app: nurlanmikayilovesened 
+    spec:
+      containers:
+        - name: nurlanmikayilovesened 
+          image: azercellcontainers.azurecr.io/nurlanmikayilovesened
+          ports:
+          - containerPort: 80
